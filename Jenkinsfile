@@ -79,7 +79,7 @@ environment {
             }   
         }
 
-        stage(" Docker Build ") {
+        stage("Build Docker Image") {
             steps {
                 script {
                     echo '<--------------- Docker Build Started --------------->'
@@ -89,7 +89,7 @@ environment {
             }
         }
         
-        stage (" Docker Publish "){
+        stage ("Publish to Docker Repo"){
             steps {
                 script {
                     echo '<--------------- Docker Publish Started --------------->'  
