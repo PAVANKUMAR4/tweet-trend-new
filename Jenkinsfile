@@ -1,3 +1,4 @@
+def registry = 'https://pavaninfinity.jfrog.io/'
 pipeline {
     agent {
         node {
