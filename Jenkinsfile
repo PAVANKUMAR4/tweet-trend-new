@@ -89,7 +89,7 @@ environment {
             }
         }
         
-        stage ("Publish to Docker Repo"){
+        stage ("Publish to Docker Repo") {
             steps {
                 script {
                     echo '<--------------- Docker Publish Started --------------->'  
@@ -99,6 +99,14 @@ environment {
                     echo '<--------------- Docker Publish Ended --------------->'  
                 }
             }
-        } 
+        }
+
+        stage('Deploy to K8s') {
+            steps{
+                script {
+                    sh './deploy.sh'
+                }
+            }
+        }
     }
 }
