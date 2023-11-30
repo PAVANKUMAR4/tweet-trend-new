@@ -101,12 +101,12 @@ environment {
             }
         }
 
-        stage('Deploy to K8s') {
+        /*stage('Deploy to K8s') {
             steps{
                 script {
                     sh './deploy.sh'
                 }
             }
-        }
+        }*/
     }
 }
